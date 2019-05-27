@@ -22,9 +22,9 @@ if not response1.history:
     response1 = response1.replace("\\", "")
     response1 = re.search(r'(?s)(?<=Process Detail)(.*)(?=Comments)', response1).group()
     response1 = ("Process Checker: \n Process Detail " + response1)
-    print("######################################################")
+    print("#" * 30)
     print("\033[1;34;40m" + response1)
-    print("######################################################")
+    print("#" * 30)
 
 else:
     print("Process not in database of ProcessChecker")
@@ -48,9 +48,9 @@ if response2.status_code == 200:
     response2 = response2.replace("\\", "")
     response2 = re.search(r'(?s)(?<=What is the)(.*)(?=## Add Review)', response2).group()
     response2 = ("SystemExplorer: \n What is the " + response2)
-    print("######################################################")
+    print("#" * 30)
     print("\033[1;34;40m" + response2)
-    print("######################################################")
+    print("#" * 30)
 
 else:
     print("Process not in database of SystemExplorer")
@@ -73,9 +73,9 @@ if response3.status_code == 200:
     response3 = response3.replace("\\", "")
     response3 = re.search(r'(?s)(?<=What is)(.*)(?=Do you have additional information)', response3).group()
     response3 = ("FileNet: \n What is the " + response3)
-    print("######################################################")
+    print("#" * 30)
     print("\033[1;34;40m" + response3)
-    print("######################################################")
+    print("#" * 30)
 
 else:
     print("Process not in database of FileNet")
@@ -110,7 +110,7 @@ else:
     response4 = paths+parents+children+grandparents+hashes+network+rank+host_prev+eps+description+intel
     response4 = response4.replace(r"[[", "[")
     response4 = response4.replace("'", "")
-    print("######################################################")
+    print("#" * 30)
     print("EchoTrail: \n" + "\033[1;34;40m" + response4)
-    print("######################################################")
+    print("#" * 30)
 
